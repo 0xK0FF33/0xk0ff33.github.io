@@ -1,0 +1,55 @@
+.kw {
+  .kw-header {
+    background: #fff;
+    color: $gray;
+
+    .mdl-layout-title {
+      .title {
+        font-family: Lobster, cursive;
+        color: $blacky;
+        font-size: 2.5rem;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+        padding: 0 12px;
+      }
+    }
+
+    .mdl-navigation__link {
+      display: none;
+      color: $gray;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      &:hover {
+        border-bottom: 4px solid $main;
+      }
+
+      @media screen and (min-width: $layout-screen-size-threshold) {
+        display: block;
+      }
+    }
+
+    .mdl-layout__drawer-button {
+      color: $dark-gray;
+
+      /*@media screen and (min-width: $layout-screen-size-threshold) {
+        display: none;
+      }*/
+    }
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  // --- Mobile Navigation ---
+  .mdl-layout__drawer {
+    .mdl-layout-title {
+      font-family: Lobster, cursive;
+      color: $blacky;
+      font-size: 1.75rem;
+    }
+  }
+}
+
