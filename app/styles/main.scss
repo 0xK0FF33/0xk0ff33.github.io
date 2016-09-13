@@ -1,0 +1,40 @@
+@import "variables";
+
+.kw {
+  .kw-header {
+    background: #fff;
+    color: $gray;
+
+    .mdl-layout-title {
+
+    }
+
+    .mdl-navigation__link {
+      display: none;
+      color: $gray;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      &:hover {
+        border-bottom: 4px solid $main;
+      }
+
+      @media screen and (min-width: $layout-screen-size-threshold) {
+        display: block;
+      }
+    }
+
+    .mdl-layout__drawer-button {
+      color: $dark-gray;
+
+      /*@media screen and (min-width: $layout-screen-size-threshold) {
+        display: none;
+      }*/
+    }
+  }
+
+
+  .logo {
+    height: 40px;
+  }
+}

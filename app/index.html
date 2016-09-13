@@ -29,14 +29,21 @@
   <!-- Color the status bar on mobile devices -->
   <meta name="theme-color" content="#2196f3">
 
+
+  <!--[if IE]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.2.0/es5-shim.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+  <![endif]-->
+
   <!-- Styles -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue-red.min.css"/>
   <link rel="stylesheet" href="styles/main.css">
 </head>
 
-<body class="mdl-base">
-<div class="mdl-layout mdl-js-layout">
+<body class="kw mdl-base">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   @@include('./partials/nav.html')
   <main class="mdl-layout__content">
     <div>Content</div>
