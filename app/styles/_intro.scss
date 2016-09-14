@@ -1,0 +1,25 @@
+.kw-intro {
+  height: 400px;
+  position: relative;
+  background: url('../images/intro.jpg') no-repeat center;
+  background-size: cover;
+
+  @media screen and (min-width: $layout-screen-size-threshold) {
+    height: 85vh;
+  }
+
+  /* Retina-specific stuff here */
+  @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    //background: url('../images/intro-2x.jpg') no-repeat;
+  }
+
+  .overlay {
+    background: rgba(0,0,0, .35);
+    width: 100%;
+    height: 100%;
+  }
+
+  .title {
+    color: #fff;
+  }
+}
