@@ -3,12 +3,13 @@
 
 # TEAM
 
-  <name> -- <role> -- <twitter>
+  Kamil Wojtczyk -- JavaScript Developer -- @L0sKamil0s
 
 # THANKS
 
-  <name>
+  Google and the community for providing Web Starter Kit!
+  https://github.com/google/web-starter-kit
 
 # TECHNOLOGY COLOPHON
 
-  HTML5, CSS3
+  HTML5, CSS3, JS
