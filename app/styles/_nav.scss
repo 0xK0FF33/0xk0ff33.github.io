@@ -4,14 +4,13 @@
     color: $gray;
 
     .mdl-layout-title {
-      .title {
-        font-family: Lobster, cursive;
-        color: $blacky;
-        font-size: 2.5rem;
-        display: inline-block;
-        vertical-align: middle;
-        line-height: normal;
-        padding: 0 12px;
+      position: absolute;
+      //left: calc(50% - 145px);
+      left: calc(50% - 40px);
+
+      @media screen and (min-width: $layout-screen-size-threshold) {
+        position: relative;
+        left: 20px;
       }
     }
 
