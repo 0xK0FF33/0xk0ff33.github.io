@@ -1,7 +1,6 @@
 .kw {
   .kw-header {
-    background: #fff;
-    color: $gray;
+    color: #fff;
 
     .mdl-layout-title {
       position: absolute;
@@ -16,7 +15,6 @@
 
     .mdl-navigation__link {
       display: none;
-      color: $gray;
       font-weight: 700;
       text-transform: uppercase;
 
@@ -49,6 +47,10 @@
       color: $blacky;
       font-size: 1.75rem;
     }
+  }
+
+  .mdl-layout__drawer-button {
+    color: #fff;
   }
 }
 
