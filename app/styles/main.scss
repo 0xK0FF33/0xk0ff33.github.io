@@ -7,3 +7,9 @@
 .blue {
   color: $main;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  margin: 2.1rem 0 1.68rem 0;
+}
