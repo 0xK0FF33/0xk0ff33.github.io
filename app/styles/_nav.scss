@@ -1,15 +1,22 @@
 .kw {
-  .kw-header {
+  #kw-header {
     color: #fff;
+    display: block;
 
     .mdl-layout-title {
       position: absolute;
       //left: calc(50% - 145px);
-      left: calc(50% - 40px);
+      left: calc(50% - 20px);
 
-      @media screen and (min-width: $layout-screen-size-threshold) {
-        position: relative;
-        left: 20px;
+      @media (min-width: $grid-tablet-breakpoint) {
+        position: absolute;
+        left: 0;
+        margin-left: calc(8.666666666% + 10px);
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
       }
     }
 
@@ -22,7 +29,7 @@
         border-bottom: 4px solid $main;
       }
 
-      @media screen and (min-width: $layout-screen-size-threshold) {
+      @media (min-width: $grid-tablet-breakpoint) {
         display: block;
       }
     }
@@ -51,6 +58,10 @@
 
   .mdl-layout__drawer-button {
     color: #fff;
+
+    @media (min-width: $grid-desktop-breakpoint) {
+      display: none;
+    }
   }
 }
 
