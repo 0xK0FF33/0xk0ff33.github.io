@@ -117,6 +117,7 @@ gulp.task('scripts', () =>
     './app/scripts/main.js'
     // Other scripts
   ])
+    .pipe($.plumber())
     .pipe($.newer('.tmp/scripts'))
     .pipe($.sourcemaps.init())
     .pipe($.babel())
@@ -134,13 +135,13 @@ gulp.task('scripts', () =>
 gulp.task('html', () => {
   return gulp.src(['app/*.html', '!app/partials/*.html'])
     .pipe($.plumber())
-    .pipe($.fileInclude({
-      prefix: '@@',
-      basepath: '@file'
-    }))
     .pipe($.useref({
       searchPath: '{.tmp,app}',
       noAssets: true
+    }))
+    .pipe($.fileInclude({
+      prefix: '@@',
+      basepath: '@file'
     }))
     .pipe(gulp.dest('.tmp/'))
     // Minify any HTML
