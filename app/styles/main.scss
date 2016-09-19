@@ -19,3 +19,29 @@ h1, h2, h3, h4, h5, h6 {
   background: url('../images/intro.jpg') no-repeat top / cover;
   position: relative;
 }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+
+  &:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color: $main;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px;
+
+    /* Position the tooltip */
+    position: absolute;
+    top: 120%;
+    left: 0;
+    z-index: 1;
+  }
+}
