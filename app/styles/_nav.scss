@@ -2,6 +2,7 @@
   #kw-header {
     color: #fff;
     display: block;
+    transition: all 0.4s ease;
 
     .mdl-layout-title {
       position: absolute;
@@ -34,12 +35,8 @@
       }
     }
 
-    .mdl-layout__drawer-button {
-      color: $dark-gray;
-
-      /*@media screen and (min-width: $layout-screen-size-threshold) {
-        display: none;
-      }*/
+    &.kw-header-fixed {
+      background-color: #fff;
     }
   }
 
@@ -50,7 +47,7 @@
   // --- Mobile Navigation ---
   .mdl-layout__drawer {
     .mdl-layout-title {
-      font-family: Lobster, cursive;
+      //font-family: Lobster, cursive;
       color: $blacky;
       font-size: 1.75rem;
     }
@@ -62,6 +59,9 @@
     @media (min-width: $grid-desktop-breakpoint) {
       display: none;
     }
+
+    &.navbar-fixed {
+      color: $gray;
+    }
   }
 }
-

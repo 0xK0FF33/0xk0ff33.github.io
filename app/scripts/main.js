@@ -73,6 +73,20 @@
   }
 
   document.addEventListener('DOMContentLoaded', function() {
-    console.log('works');
+    document.getElementById('content').onscroll = function () {
+      var header = document.getElementById('kw-header');
+      var drawerButton = document.getElementsByClassName('mdl-layout__drawer-button')[0];
+
+      if (this.scrollTop > 62) {
+        header.classList.remove('mdl-layout__header--transparent');
+        header.classList.add('kw-header-fixed');
+        drawerButton.classList.add('navbar-fixed');
+      }
+      else {
+        header.classList.add('mdl-layout__header--transparent');
+        header.classList.remove('kw-header-fixed');
+        drawerButton.classList.remove('navbar-fixed');
+      }
+    };
   });
 })();
