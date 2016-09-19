@@ -73,7 +73,7 @@
   }
 
   document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('content').onscroll = function() {
+    document.getElementsByClassName('mdl-layout__content')[0].onscroll = function() {
       var header = document.getElementById('kw-header');
       var drawerButton = document.getElementsByClassName('mdl-layout__drawer-button')[0];
 
