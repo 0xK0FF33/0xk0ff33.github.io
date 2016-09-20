@@ -66,6 +66,7 @@ gulp.task('copy', () =>
   gulp.src([
     'app/*',
     '!app/*.html',
+    '!app/partials',
     'node_modules/apache-server-configs/dist/.htaccess'
   ], {
     dot: true
@@ -133,15 +134,15 @@ gulp.task('scripts', () =>
 
 // Scan your HTML for assets & optimize them
 gulp.task('html', () => {
-  return gulp.src(['app/*.html', '!app/partials/*.html'])
+  return gulp.src('app/index.html')
     .pipe($.plumber())
-    .pipe($.useref({
-      searchPath: '{.tmp,app}',
-      noAssets: true
-    }))
     .pipe($.fileInclude({
       prefix: '@@',
       basepath: '@file'
+    }))
+    .pipe($.useref({
+      searchPath: '{.tmp,app}',
+      noAssets: true
     }))
     .pipe(gulp.dest('.tmp/'))
     // Minify any HTML
