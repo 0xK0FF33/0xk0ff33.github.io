@@ -138,7 +138,10 @@ gulp.task('html', () => {
     .pipe($.plumber())
     .pipe($.fileInclude({
       prefix: '@@',
-      basepath: '@file'
+      basepath: '@file',
+      context: {
+        env: process.env.NODE_ENV || ''
+      }
     }))
     .pipe($.useref({
       searchPath: '{.tmp,app}',
@@ -205,14 +208,16 @@ gulp.task('serve:dist', ['default'], () =>
 );
 
 // Build production files, the default task
-gulp.task('default', ['clean'], cb =>
+gulp.task('default', ['clean'], cb => {
+  process.env.NODE_ENV = 'production';
+
   runSequence(
     'styles',
     ['lint', 'html', 'scripts', 'images', 'copy'],
     'generate-service-worker',
     cb
   )
-);
+});
 
 // Run PageSpeed Insights
 gulp.task('pagespeed', cb =>
