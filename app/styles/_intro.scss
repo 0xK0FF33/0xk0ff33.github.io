@@ -2,6 +2,10 @@
   height: 80vh;
   position: relative;
 
+  .card-wide {
+    margin-bottom: 2rem;
+  }
+
   @media screen and (min-width: $layout-screen-size-threshold) {
     height: 85vh;
   }
@@ -11,7 +15,6 @@
     width: 100%;
     position: relative;
     top: 50px;
-    margin-bottom: 2rem;
 
     text-align: center;
     @media (min-width: $grid-tablet-breakpoint) {
