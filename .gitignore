@@ -2,3 +2,4 @@ node_modules
 .tmp
 app.yaml
 .idea
+.vscode
