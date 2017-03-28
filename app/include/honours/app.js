@@ -10,18 +10,19 @@ statusText.addEventListener('click', function () {
     return;
   } else {
     statusText.textContent = 'Connecting...';
+    let arr = [];
+
     miBand.connect()
+      .then(() => miBand.getDeviceName())
+      .then(data => arr.push(data))
+      .then(() => miBand.getBatteryInfo())
+      .then(data => arr.push(data))
+      .then(() => miBand.getDeviceInfo())
+      .then(data => arr.push(data))
       .then(() => {
-        return Promise.all([
-          miBand.getDeviceName(),
-          miBand.getBatteryInfo(),
-          miBand.getDeviceInfo()
-        ]);
-      })
-      .then(data => {
-        let deviceName = data[0].replace(/[^a-zA-Z0-9]/g,'');
-        let batteryInfo = data[1];
-        let firmwareInfo = data[2];
+        let deviceName = arr[0].replace(/[^a-zA-Z0-9]/g,'');
+        let batteryInfo = arr[1];
+        let firmwareInfo = arr[2];
 
         let div = `
         <div class="left">Name:</div><div class="right">${deviceName}</div>
