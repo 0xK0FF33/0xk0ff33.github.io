@@ -86,7 +86,7 @@ function updateSteps(steps) {
 
 function updateStats() {
   var stats = '';
-  Object.keys(localStorage).reverse().forEach(key => {
+  Object.keys(localStorage).reverse().filter(e => e.startsWith('20')).forEach(key => {
     var day = new Date(key).toDateString().slice(0, -5);
     stats += '<div class="date">' + day + '</div>' +
         '<div class="steps">' + localStorage.getItem(key) + '</div>';
