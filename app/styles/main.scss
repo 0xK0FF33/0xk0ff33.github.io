@@ -15,9 +15,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans",sans-serif;
 }
 
-.kw-layout {
-  background: url('../images/intro.jpg') no-repeat top / cover fixed;
-  position: relative;
+html {
+  background: url('../images/intro.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  margin:0px;
 }
 
 .tooltip {
