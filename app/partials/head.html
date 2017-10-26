@@ -2,8 +2,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Few words about me and ">
   <title>Kamil Wojtczyk - Full Stack Developer</title>
+  <meta name="description" content="Few words about me">
 
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
@@ -26,6 +26,29 @@
   <!-- Color the status bar on mobile devices -->
   <meta name="theme-color" content="#2196f3">
 
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="Kamil Wojtczyk - Full Stack Developer">
+  <meta itemprop="description" content="Few words about me">
+  <meta itemprop="image" content="https://wojtczyk.net/images/me.jpg">
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@KamilHacks">
+  <meta name="twitter:title" content="Kamil Wojtczyk - Full Stack Developer">
+  <meta name="twitter:description" content="Few words about me">
+  <meta name="twitter:creator" content="@KamilHacks">
+  <!-- Twitter summary card with large image must be at least 280x150px -->
+  <meta name="twitter:image:src" content="https://wojtczyk.net/images/me.jpg">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Kamil Wojtczyk - Full Stack Developer" />
+  <meta property="og:type" content="blog" />
+  <meta property="og:url" content="https://wojtczyk.net/" />
+  <meta property="og:image" content="https://wojtczyk.net/images/me.jpg" />
+  <meta property="og:description" content="Few words about me" />
+  <meta property="og:site_name" content="Wojtczyk.net" />
+  <meta property="article:published_time" content="2016-09-08T23:59:00+01:00" />
+  <meta property="article:modified_time" content="2017-10-26T23:04:47+01:00" />
 
   <!--[if IE]>
   <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.2.0/es5-shim.min.js"></script>
@@ -36,26 +59,23 @@
   <!-- Script that needs to load before the page -->
   <!--<script src="scripts/picturefill.min.js"></script>-->
 
-  <!-- loadCSS: load a CSS file asynchronously. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT -->
-  <script>!function(e){"use strict";var n=function(n,t,o){function i(e){return a.body?e():void setTimeout(function(){i(e)})}function r(){l.addEventListener&&l.removeEventListener("load",r),l.media=o||"all"}var d,a=e.document,l=a.createElement("link");if(t)d=t;else{var s=(a.body||a.getElementsByTagName("head")[0]).childNodes;d=s[s.length-1]}var f=a.styleSheets;l.rel="stylesheet",l.href=n,l.media="only x",i(function(){d.parentNode.insertBefore(l,t?d:d.nextSibling)});var u=function(e){for(var n=l.href,t=f.length;t--;)if(f[t].href===n)return e();setTimeout(function(){u(e)})};return l.addEventListener&&l.addEventListener("load",r),l.onloadcssdefined=u,u(r),l};"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this)</script>
-  <!-- CSS rel=preload polyfill. Depends on loadCSS function. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT -->
-  <script>!function(t){if(t.loadCSS){var e=loadCSS.relpreload={};if(e.support=function(){try{return t.document.createElement("link").relList.supports("preload")}catch(e){return!1}},e.poly=function(){for(var e=t.document.getElementsByTagName("link"),n=0;n<e.length;n++){var r=e[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(t.loadCSS(r.href,r),r.rel=null)}},!e.support()){e.poly();var n=t.setInterval(e.poly,300);t.addEventListener&&t.addEventListener("load",function(){t.clearInterval(n)}),t.attachEvent&&t.attachEvent("onload",function(){t.clearInterval(n)})}}}(this)</script>
-
   <!-- Styles -->
   @@if (env === 'production') {
-  <style>@@include('../../dist/styles/main.css')</style>
-  }
-  @@if (env !== 'production') {
-  <link rel="stylesheet" href="styles/main.css">
-  }
+  <style>
+    @@include('../../dist/styles/main.css')
+  </style>
+  } @@if (env !== 'production') {
+  <link rel="stylesheet" href="styles/main.css"> }
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-red.min.css">
 
   <!-- Google Analytics -->
   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      (function (i, s, o, g, r, a, m) {
+i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+}, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', 'UA-57230724-2', 'auto');
     ga('send', 'pageview');
