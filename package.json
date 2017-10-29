@@ -39,7 +39,9 @@
   },
   "private": true,
   "scripts": {
-    "deploy": "gulp && cd dist && surge . && cd .. && gulp clean",
+    "build": "gulp",
+    "deploy": "surge --project ./dist",
+    "deploy-locally": "gulp && cd dist && surge . && cd .. && gulp clean",
     "test": "echo \"Error: no test specified.\""
   },
   "eslintConfig": {
