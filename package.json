@@ -40,9 +40,9 @@
   "private": true,
   "scripts": {
     "build": "gulp",
+    "serve": "gulp serve",
     "deploy": "surge --project ./dist",
-    "deploy-locally": "gulp && cd dist && surge . && cd .. && gulp clean",
-    "test": "echo \"Error: no test specified.\""
+    "deploy-locally": "gulp && cd dist && surge . && cd .. && gulp clean"
   },
   "eslintConfig": {
     "extends": "google"
