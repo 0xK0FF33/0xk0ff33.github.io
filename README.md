@@ -1,4 +1,4 @@
-# [![Wojtczyk.net logo](https://raw.githubusercontent.com/LsKs/lsks.github.io/develop/app/images/wojtczyk_logo.png)](https://wojtczyk.net)
+# [![Wojtczyk.net logo](https://raw.githubusercontent.com/K0ff33/wojtczyk.net/master/app/images/wojtczyk_logo.png)](https://wojtczyk.net)
 
 ## Overview
 
