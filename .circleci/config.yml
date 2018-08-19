@@ -28,13 +28,13 @@ jobs:
 
       - run: npm install
 
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
       # Build
       - run: npm run build
 
       # Deploy
       - run: npm run deploy
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
